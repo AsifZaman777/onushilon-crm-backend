@@ -6,6 +6,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { ENV } from "./config/env.js";
 import apiRoutes from "./routes/index.js";
+import { HealthController } from "./controllers/health.controller.js";
 import { errorHandler, notFoundHandler } from "./middlewares/error.middleware.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -38,7 +39,11 @@ app.use(
       if (
         allowedOrigins.includes(origin) ||
         process.env.NODE_ENV === "development" ||
-        origin.startsWith("http://localhost:")
+        origin.startsWith("http://localhost:") ||
+        origin.startsWith("http://127.0.0.1:") ||
+        origin.endsWith(".vercel.app") ||
+        origin.endsWith(".onrender.com") ||
+        origin.includes("onushilon")
       ) {
         return callback(null, true);
       }
@@ -74,13 +79,17 @@ app.use("/api/v1", (req, res, next) => {
 // API v1 Routes
 app.use("/api/v1", apiRoutes);
 
+// Standalone health endpoints (supports standard load balancers & monitoring tools)
+app.get("/health", HealthController.getHealth);
+app.get("/api/health", HealthController.getHealth);
+
 // Root information endpoint
 app.get("/", (req, res) => {
   res.json({
     service: "Onushilon CRM Scalable Backend API",
     version: "1.0.0",
     status: "online",
-    healthEndpoint: "/api/v1/health",
+    healthEndpoints: ["/health", "/api/health", "/api/v1/health"],
     adminPortalUrl: "http://localhost:3000/admin-portal",
   });
 });
