@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / coverage
+coverage/
+dist/
+build/
+
+# Local runtime data
+data/*.json
+!data/.gitkeep
+
+# Uploaded media and generated files
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/courses/
+!public/uploads/general/
+public/uploads/courses/*
+public/uploads/general/*
+!public/uploads/courses/.gitkeep
+!public/uploads/general/.gitkeep
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*.swo
