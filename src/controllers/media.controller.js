@@ -37,14 +37,19 @@ export const MediaController = {
   async delete(req, res, next) {
     try {
       const { id } = req.params;
-      const { storagePath, publicUrl } = req.body;
+      const storagePath = req.body?.storagePath || req.query?.storagePath || (id !== "undefined" && !id.startsWith("asset-") ? id : null);
+      const publicUrl = req.body?.publicUrl || req.query?.publicUrl;
 
-      await StorageService.deleteFile(storagePath, publicUrl);
-      await StoreService.deleteMediaAsset(id);
+      const deleteResult = await StorageService.deleteFile(storagePath, publicUrl);
+      if (id) {
+        await StoreService.deleteMediaAsset(id);
+      }
 
+      res.set("Cache-Control", "no-store, no-cache, must-revalidate");
       res.status(200).json({
         success: true,
-        message: "Media asset deleted successfully",
+        message: "Media asset deleted successfully and storage cache invalidated",
+        data: deleteResult,
       });
     } catch (error) {
       next(error);

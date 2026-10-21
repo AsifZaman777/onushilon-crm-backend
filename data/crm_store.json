@@ -814,6 +814,56 @@
   ],
   "media_assets": [
     {
+      "id": "media-1792619124958",
+      "file_name": "robotic_class5.jpg",
+      "storage_path": "courses/robotic_class5-1792619123037-2cd66154.jpg",
+      "public_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/courses/robotic_class5-1792619123037-2cd66154.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 1737559,
+      "alt_text": "robotic_class5.jpg",
+      "created_at": "2026-10-21T21:45:24.958Z"
+    },
+    {
+      "id": "media-1792619083160",
+      "file_name": "robotic_class4.jpg",
+      "storage_path": "mentors/robotic_class4-1792619081322-e3147e95.jpg",
+      "public_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/mentors/robotic_class4-1792619081322-e3147e95.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 1599322,
+      "alt_text": "robotic_class4.jpg",
+      "created_at": "2026-10-21T21:44:43.160Z"
+    },
+    {
+      "id": "media-1792619068002",
+      "file_name": "robotic_class5.jpg",
+      "storage_path": "mentors/robotic_class5-1792619065476-0018b22d.jpg",
+      "public_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/mentors/robotic_class5-1792619065476-0018b22d.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 1737559,
+      "alt_text": "robotic_class5.jpg",
+      "created_at": "2026-10-21T21:44:28.002Z"
+    },
+    {
+      "id": "media-1792616986849",
+      "file_name": "art_class1.jpg",
+      "storage_path": "courses/art_class1-1792616983814-273a0fc4.jpg",
+      "public_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/courses/art_class1-1792616983814-273a0fc4.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 5599815,
+      "alt_text": "art_class1.jpg",
+      "created_at": "2026-10-21T21:09:46.849Z"
+    },
+    {
+      "id": "media-1792616935328",
+      "file_name": "system-flowchart.png",
+      "storage_path": "courses/system-flowchart-1792616933842-b012c952.png",
+      "public_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/courses/system-flowchart-1792616933842-b012c952.png",
+      "mime_type": "image/png",
+      "size_bytes": 38883,
+      "alt_text": "system-flowchart.png",
+      "created_at": "2026-10-21T21:08:55.328Z"
+    },
+    {
       "id": "media-1792612971856",
       "file_name": "passport_in_asifzaman-1792602236934-9ead9943.png",
       "storage_path": "mentors/passport_in_asifzaman-1792602236934-9ead9943-1792612969711-3b0cf396.png",

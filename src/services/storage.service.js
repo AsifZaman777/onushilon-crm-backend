@@ -38,7 +38,7 @@ export const StorageService = {
     let storageType = "local";
 
     if (isSupabaseReady()) {
-      const bucket = ENV.SUPABASE_BUCKET_NAME || "onushilon-media";
+      const bucket = ENV.SUPABASE_BUCKET_NAME || "onushilon";
 
       try {
         // Ensure bucket exists or attempt upload
@@ -109,14 +109,31 @@ export const StorageService = {
     };
   },
 
-  /**
-   * Delete file from storage
-   */
   async deleteFile(storagePath, publicUrl = null) {
-    if (isSupabaseReady() && storagePath) {
+    const bucket = ENV.SUPABASE_BUCKET_NAME || "onushilon";
+    let resolvedPath = storagePath;
+
+    if ((!resolvedPath || resolvedPath === "null" || resolvedPath === "undefined") && publicUrl) {
+      const marker = `/storage/v1/object/public/${bucket}/`;
+      if (publicUrl.includes(marker)) {
+        resolvedPath = decodeURIComponent(publicUrl.split(marker)[1].split("?")[0]);
+      } else if (publicUrl.includes("/object/public/")) {
+        const parts = publicUrl.split("/object/public/")[1].split("/");
+        parts.shift(); // remove bucket
+        resolvedPath = decodeURIComponent(parts.join("/").split("?")[0]);
+      } else if (publicUrl.startsWith("/uploads/")) {
+        resolvedPath = publicUrl.replace("/uploads/", "").split("?")[0];
+      }
+    }
+
+    if (isSupabaseReady() && resolvedPath) {
       try {
-        const bucket = ENV.SUPABASE_BUCKET_NAME || "onushilon-media";
-        await supabase.storage.from(bucket).remove([storagePath]);
+        const { error } = await supabase.storage.from(bucket).remove([resolvedPath]);
+        if (error) {
+          console.warn(`Supabase file delete warning (${resolvedPath}):`, error.message);
+        } else {
+          console.log(`✅ Deleted file from Supabase bucket "${bucket}":`, resolvedPath);
+        }
       } catch (err) {
         console.warn("Supabase file delete error:", err.message);
       }
@@ -124,7 +141,7 @@ export const StorageService = {
 
     // If local file, delete from local disk
     if (publicUrl && publicUrl.startsWith("/uploads/")) {
-      const localRel = publicUrl.replace("/uploads/", "");
+      const localRel = publicUrl.replace("/uploads/", "").split("?")[0];
       const fullPath = path.join(LOCAL_UPLOADS_DIR, localRel);
       if (fs.existsSync(fullPath)) {
         try {
@@ -135,7 +152,7 @@ export const StorageService = {
       }
     }
 
-    return { success: true };
+    return { success: true, deletedPath: resolvedPath };
   },
 
   /**
