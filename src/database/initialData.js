@@ -239,6 +239,8 @@ export const INITIAL_SECTIONS = [
     name: "Hero Section",
     data_en: {
       headline_words: ["Learn", "by", "practice."],
+      headline_scale: 100,
+      subtitle_scale: 100,
       subtitle: "Onushilon Academy gives you expert mentors, live interactive classes and daily exercises, from SSC to job-ready tech skills.",
       primary_cta_text: "Browse courses",
       secondary_cta_text: "Explore class moments",
@@ -246,6 +248,8 @@ export const INITIAL_SECTIONS = [
     },
     data_bn: {
       headline_words: ["চর্চায়", "শিখি,", "অনুশীলনে।"],
+      headline_scale: 100,
+      subtitle_scale: 100,
       subtitle: "অনলাইন ও অফলাইনে অভিজ্ঞ মেন্টরদের নিবিড় দিকনির্দেশনা, সরাসরি ইন্টারঅ্যাক্টিভ ক্লাস এবং প্রতিদিনের অনুশীলনের মাধ্যমে নিজেকে গড়ে তুলুন।",
       primary_cta_text: "কোর্সসমূহ দেখুন",
       secondary_cta_text: "ক্লাসের মুহূর্ত দেখুন",
