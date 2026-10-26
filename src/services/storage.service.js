@@ -159,61 +159,75 @@ export const StorageService = {
    * List files in Supabase bucket or local directory
    */
   async listFiles(folder = "") {
+    const allFiles = [];
+    const seen = new Set();
+
     if (isSupabaseReady()) {
       try {
         const bucket = ENV.SUPABASE_BUCKET_NAME || "onushilon";
-        const foldersToList = folder ? [folder] : ["photos", "moments", "courses", "uploads", ""];
-        const allFiles = [];
-        const seen = new Set();
+        const foldersToList = folder
+          ? [folder]
+          : ["photos", "moments", "courses", "mentors", "general", "uploads", ""];
 
-        for (const f of foldersToList) {
-          const { data, error } = await supabase.storage.from(bucket).list(f, {
-            limit: 100,
-            offset: 0,
-            sortBy: { column: "created_at", order: "desc" },
-          });
+        const listings = await Promise.all(
+          foldersToList.map((f) =>
+            supabase.storage
+              .from(bucket)
+              .list(f, {
+                limit: 200,
+                offset: 0,
+                sortBy: { column: "created_at", order: "desc" },
+              })
+              .then((r) => ({ f, ...r }))
+              .catch(() => ({ f, data: null, error: true }))
+          )
+        );
 
-          if (!error && data) {
-            for (const item of data) {
-              // Ignore folder entries (item.id === null in supabase storage indicates a folder)
-              if (item.id && !seen.has(item.name)) {
-                seen.add(item.name);
-                const pathKey = f ? `${f}/${item.name}` : item.name;
-                const { data: urlData } = supabase.storage
-                  .from(bucket)
-                  .getPublicUrl(pathKey);
-                allFiles.push({
-                  name: item.name,
-                  id: item.id,
-                  size: item.metadata?.size || 0,
-                  mimeType: item.metadata?.mimetype,
-                  createdAt: item.created_at,
-                  publicUrl: urlData.publicUrl,
-                  storageType: "supabase",
-                });
-              }
-            }
+        for (const { f, data, error } of listings) {
+          if (error || !data) continue;
+          for (const item of data) {
+            // Folder entries have item.id === null in Supabase storage
+            if (!item.id) continue;
+            const pathKey = f ? `${f}/${item.name}` : item.name;
+            if (seen.has(pathKey)) continue;
+            seen.add(pathKey);
+            const { data: urlData } = supabase.storage.from(bucket).getPublicUrl(pathKey);
+            allFiles.push({
+              name: item.name,
+              id: item.id,
+              storagePath: pathKey,
+              size: item.metadata?.size || 0,
+              mimeType: item.metadata?.mimetype,
+              createdAt: item.created_at,
+              publicUrl: urlData.publicUrl,
+              storageType: "supabase",
+            });
           }
-        }
-
-        if (allFiles.length > 0) {
-          return allFiles;
         }
       } catch (e) {
         console.warn("Supabase listFiles exception:", e.message);
       }
     }
 
-    // Return catalog from store
+    // Merge the catalog (covers local-disk uploads and anything not listed above)
     const assets = await StoreService.getMediaAssets();
-    return assets.map((a) => ({
-      name: a.file_name,
-      id: a.id,
-      size: a.size_bytes,
-      mimeType: a.mime_type,
-      createdAt: a.created_at,
-      publicUrl: a.public_url,
-      storageType: a.public_url.startsWith("http") ? "supabase" : "local",
-    }));
+    for (const a of assets) {
+      if (!a.public_url || allFiles.some((x) => x.publicUrl === a.public_url)) continue;
+      if (folder && !(a.storage_path || "").startsWith(`${folder}/`)) continue;
+      allFiles.push({
+        name: a.file_name,
+        id: a.id,
+        storagePath: a.storage_path,
+        size: a.size_bytes,
+        mimeType: a.mime_type,
+        createdAt: a.created_at,
+        publicUrl: a.public_url,
+        storageType: a.public_url.startsWith("http") ? "supabase" : "local",
+      });
+    }
+
+    return allFiles.sort(
+      (a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0)
+    );
   },
 };

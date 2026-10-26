@@ -15,8 +15,15 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.resolve(__dirname, "../../data");
 const STORE_FILE = path.join(DATA_DIR, "crm_store.json");
 
+let storeCache = null;
+
 // Ensure local data directory and seed file exist
 function getLocalStore() {
+  if (storeCache) return storeCache;
+  return (storeCache = loadLocalStoreFromDisk());
+}
+
+function loadLocalStoreFromDisk() {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
@@ -82,6 +89,7 @@ function getLocalStore() {
 }
 
 function saveLocalStore(data) {
+  storeCache = data;
   try {
     if (!fs.existsSync(DATA_DIR)) {
       fs.mkdirSync(DATA_DIR, { recursive: true });

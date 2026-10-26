@@ -8,6 +8,7 @@ import { ENV } from "./config/env.js";
 import apiRoutes from "./routes/index.js";
 import { HealthController } from "./controllers/health.controller.js";
 import { errorHandler, notFoundHandler } from "./middlewares/error.middleware.js";
+import { notifyWebsiteContentChanged } from "./services/revalidate.service.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -76,6 +77,19 @@ app.use("/api/v1", (req, res, next) => {
   next();
 });
 
+// After any successful content mutation (courses, sections, mentors, settings, media...)
+// tell the website to refresh its prerendered content immediately.
+app.use("/api/v1", (req, res, next) => {
+  const isMutation = ["POST", "PUT", "PATCH", "DELETE"].includes(req.method);
+  const isContentRoute = !/^\/(auth|leads|public)/.test(req.path);
+  if (isMutation && isContentRoute) {
+    res.on("finish", () => {
+      if (res.statusCode < 400) notifyWebsiteContentChanged();
+    });
+  }
+  next();
+});
+
 // API v1 Routes
 app.use("/api/v1", apiRoutes);
 
@@ -85,18 +99,21 @@ app.get("/api/health", HealthController.getHealth);
 
 // Root information endpoint
 app.get("/", (req, res) => {
+  const websiteBase = ENV.WEBSITE_URL || "http://localhost:3000";
   res.json({
     service: "Onushilon CRM Scalable Backend API",
     version: "1.0.0",
     status: "online",
+    environment: ENV.NODE_ENV,
     healthEndpoints: ["/health", "/api/health", "/api/v1/health"],
-    adminPortalUrl: "http://localhost:3000/admin-portal",
+    adminPortalUrl: `${websiteBase}/admin-portal`,
   });
 });
 
 // Admin redirect to Next.js admin portal
 app.get(/^\/admin/, (req, res) => {
-  res.redirect("http://localhost:3000/admin-portal");
+  const websiteBase = ENV.WEBSITE_URL || "http://localhost:3000";
+  res.redirect(`${websiteBase}/admin-portal`);
 });
 
 // Centralized error handling
