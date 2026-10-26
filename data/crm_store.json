@@ -249,6 +249,8 @@
           "by",
           "practice."
         ],
+        "headline_scale": 100,
+        "subtitle_scale": 100,
         "subtitle": "Onushilon Academy gives you expert mentors, live interactive classes and daily exercises, from SSC to job-ready tech skills.",
         "primary_cta_text": "Browse courses",
         "secondary_cta_text": "Explore class moments",
@@ -260,6 +262,8 @@
           "শিখি,",
           "অনুশীলনে।"
         ],
+        "headline_scale": 100,
+        "subtitle_scale": 100,
         "subtitle": "অনলাইন ও অফলাইনে অভিজ্ঞ মেন্টরদের নিবিড় দিকনির্দেশনা, সরাসরি ইন্টারঅ্যাক্টিভ ক্লাস এবং প্রতিদিনের অনুশীলনের মাধ্যমে নিজেকে গড়ে তুলুন।",
         "primary_cta_text": "কোর্সসমূহ দেখুন",
         "secondary_cta_text": "ক্লাসের মুহূর্ত দেখুন",
@@ -268,28 +272,27 @@
       "media": {
         "floating_cards": [
           {
-            "src": "/images/photos/robotic_class1.webp",
+            "src": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/robotic_class1.webp",
             "title": "Robotics & Microcontroller STEM",
             "badge": "🤖 Robotics Lab"
           },
           {
-            "src": "/images/photos/art_class1.webp",
+            "src": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/art_class1.webp",
             "title": "Creative Art & Canvas Drawing",
             "badge": "🎨 Art Studio"
           },
           {
-            "src": "/images/photos/classroom1.webp",
+            "src": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/classroom1.webp",
             "title": "Interactive Concept Lecture",
             "badge": "📚 Smart Classroom"
           },
           {
-            "src": "/images/photos/karate_class1.webp",
+            "src": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/karate_class1.webp",
             "title": "Physical Dojo & Martial Arts",
             "badge": "🥋 Karate Dojo"
           }
         ]
-      },
-      "updated_at": "2026-10-21T15:45:12.159Z"
+      }
     },
     {
       "section_id": "story",
@@ -299,20 +302,49 @@
         "lead": "We started because lectures alone never made anyone truly confident. Every course here is built around doing the work, getting detailed mentor feedback, and mastering the concept.",
         "timeline": [
           {
+            "basis": "yearly",
             "year": "2014",
-            "text": "Five students, one rented room, and a rule: every lesson ends with practice."
+            "year_en": "2014",
+            "year_bn": "২০১৪",
+            "text": "Five students, one rented room, and a rule: every lesson ends with practice.",
+            "text_en": "Five students, one rented room, and a rule: every lesson ends with practice.",
+            "text_bn": "পাঁচজন শিক্ষার্থী, একটি ভাড়া করা কক্ষ এবং একটিই মূলমন্ত্র: প্রতিটি ক্লাসের শেষেই নিয়মিত অনুশীলন।"
           },
           {
+            "basis": "yearly",
             "year": "2018",
-            "text": "We opened a second branch and began recording every class for revision."
+            "year_en": "2018",
+            "year_bn": "২০১৮",
+            "text": "We opened a second branch and began recording every class for revision.",
+            "text_en": "We opened a second branch and began recording every class for revision.",
+            "text_bn": "দ্বিতীয় শাখার যাত্রা এবং ক্লাসের পর রিভিশন নিশ্চিত করতে প্রতিটি সেশনের রেকর্ডিং শুরু।"
           },
           {
+            "basis": "yearly",
             "year": "2022",
-            "text": "Onushilon went online. Students from 40 districts joined live."
+            "year_en": "2022",
+            "year_bn": "২০২২",
+            "text": "Onushilon went online. Students from 40 districts joined live.",
+            "text_en": "Onushilon went online. Students from 40 districts joined live.",
+            "text_bn": "অনুশীলন অনলাইন প্ল্যাটফর্মে রূপান্তরিত হয়। দেশের ৪০টিরও বেশি জেলা থেকে শিক্ষার্থীরা অংশ নেয়।"
           },
           {
+            "basis": "monthly",
+            "year": "Nov 2023",
+            "year_en": "Nov 2023",
+            "year_bn": "নভেম্বর ২০২৩",
+            "text": "Launched the STEM Robotics Lab & Hardware diagnostics center.",
+            "text_en": "Launched the STEM Robotics Lab & Hardware diagnostics center.",
+            "text_bn": "স্টেম রোবোটিক্স ল্যাব ও হার্ডওয়্যার ডায়াগনস্টিকস সেন্টারের আনুষ্ঠানিক উদ্বোধন।"
+          },
+          {
+            "basis": "yearly",
             "year": "Today",
-            "text": "Over 12,000 learners practise with us every week."
+            "year_en": "Today",
+            "year_bn": "বর্তমান",
+            "text": "Over 12,000 learners practise with us every week.",
+            "text_en": "Over 12,000 learners practise with us every week.",
+            "text_bn": "প্রতি সপ্তাহে ১২,০০০-এর বেশি শিক্ষার্থী আমাদের সাথে নিয়মিত চর্চায় অংশ নিচ্ছে।"
           }
         ]
       },
@@ -321,28 +353,56 @@
         "lead": "শুধু লেকচার শুনে কেউ কোনো বিষয়ে দক্ষ হতে পারে না। আমাদের প্রতিটি কোর্স সাজানো হয়েছে কাজ করার মাধ্যমে শেখা, মেন্টরের নিবিড় মূল্যায়ন এবং মূল বিষয়বস্তু গভীরভাবে আয়ত্ত করার ওপর ভিত্তি করে।",
         "timeline": [
           {
+            "basis": "yearly",
             "year": "২০১৪",
-            "text": "পাঁচজন শিক্ষার্থী, একটি ভাড়া করা কক্ষ এবং একটিই মূলমন্ত্র: প্রতিটি ক্লাসের শেষেই নিয়মিত অনুশীলন।"
+            "year_en": "2014",
+            "year_bn": "২০১৪",
+            "text": "পাঁচজন শিক্ষার্থী, একটি ভাড়া করা কক্ষ এবং একটিই মূলমন্ত্র: প্রতিটি ক্লাসের শেষেই নিয়মিত অনুশীলন।",
+            "text_en": "Five students, one rented room, and a rule: every lesson ends with practice.",
+            "text_bn": "পাঁচজন শিক্ষার্থী, একটি ভাড়া করা কক্ষ এবং একটিই মূলমন্ত্র: প্রতিটি ক্লাসের শেষেই নিয়মিত অনুশীলন।"
           },
           {
+            "basis": "yearly",
             "year": "২০১৮",
-            "text": "দ্বিতীয় শাখার যাত্রা এবং ক্লাসের পর রিভিশন নিশ্চিত করতে প্রতিটি সেশনের রেকর্ডিং শুরু।"
+            "year_en": "2018",
+            "year_bn": "২০১৮",
+            "text": "দ্বিতীয় শাখার যাত্রা এবং ক্লাসের পর রিভিশন নিশ্চিত করতে প্রতিটি সেশনের রেকর্ডিং শুরু।",
+            "text_en": "We opened a second branch and began recording every class for revision.",
+            "text_bn": "দ্বিতীয় শাখার যাত্রা এবং ক্লাসের পর রিভিশন নিশ্চিত করতে প্রতিটি সেশনের রেকর্ডিং শুরু।"
           },
           {
+            "basis": "yearly",
             "year": "২০২২",
-            "text": "অনুশীলন অনলাইন প্ল্যাটফর্মে রূপান্তরিত হয়। দেশের ৪০টিরও বেশি জেলা থেকে শিক্ষার্থীরা অংশ নেয়।"
+            "year_en": "2022",
+            "year_bn": "২০২২",
+            "text": "অনুশীলন অনলাইন প্ল্যাটফর্মে রূপান্তরিত হয়। দেশের ৪০টিরও বেশি জেলা থেকে শিক্ষার্থীরা অংশ নেয়।",
+            "text_en": "Onushilon went online. Students from 40 districts joined live.",
+            "text_bn": "অনুশীলন অনলাইন প্ল্যাটফর্মে রূপান্তরিত হয়। দেশের ৪০টিরও বেশি জেলা থেকে শিক্ষার্থীরা অংশ নেয়।"
           },
           {
+            "basis": "monthly",
+            "year": "নভেম্বর ২০২৩",
+            "year_en": "Nov 2023",
+            "year_bn": "নভেম্বর ২০২৩",
+            "text": "স্টেম রোবোটিক্স ল্যাব ও হার্ডওয়্যার ডায়াগনস্টিকস সেন্টারের আনুষ্ঠানিক উদ্বোধন।",
+            "text_en": "Launched the STEM Robotics Lab & Hardware diagnostics center.",
+            "text_bn": "স্টেম রোবোটিক্স ল্যাব ও হার্ডওয়্যার ডায়াগনস্টিকস সেন্টারের আনুষ্ঠানিক উদ্বোধন।"
+          },
+          {
+            "basis": "yearly",
             "year": "বর্তমান",
-            "text": "প্রতি সপ্তাহে ১২,০০০-এর বেশি শিক্ষার্থী আমাদের সাথে নিয়মিত চর্চায় অংশ নিচ্ছে।"
+            "year_en": "Today",
+            "year_bn": "বর্তমান",
+            "text": "প্রতি সপ্তাহে ১২,০০০-এর বেশি শিক্ষার্থী আমাদের সাথে নিয়মিত চর্চায় অংশ নিচ্ছে।",
+            "text_en": "Over 12,000 learners practise with us every week.",
+            "text_bn": "প্রতি সপ্তাহে ১২,০০০-এর বেশি শিক্ষার্থী আমাদের সাথে নিয়মিত চর্চায় অংশ নিচ্ছে।"
           }
         ]
       },
       "media": {
-        "image_story": "/images/photos/classroom1.webp",
-        "image_story2": "/images/photos/project_building.webp"
-      },
-      "updated_at": "2026-10-21T15:45:12.162Z"
+        "image_story": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/classroom1.webp",
+        "image_story2": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/project_building.webp"
+      }
     },
     {
       "section_id": "why",
@@ -351,22 +411,56 @@
         "kicker": "The Onushilon Difference",
         "heading": "Why learning here feels different",
         "lead": "We replaced three-hour passive monologues with short interactive concept modules, immediate hands-on practice, and direct feedback from experienced mentors.",
+        "stats": [
+          {
+            "count": 12000,
+            "suffix": "+",
+            "label_en": "Active learners",
+            "label_bn": "নিয়মিত শিক্ষার্থী"
+          },
+          {
+            "count": 98,
+            "suffix": "%",
+            "label_en": "Mock exam pass rate",
+            "label_bn": "মক টেস্টে পাসের হার"
+          },
+          {
+            "count": 40,
+            "suffix": "+",
+            "label_en": "Districts joined",
+            "label_bn": "জেলায় কার্যক্রম"
+          },
+          {
+            "count": 24,
+            "suffix": "h",
+            "label_en": "Mentor feedback SLA",
+            "label_bn": "মেন্টর ফিডব্যাক নিশ্চয়তা"
+          }
+        ],
         "features": [
           {
-            "title": "Daily Practice Sets",
-            "desc": "Short, targeted tasks after every class to lock in concepts before you move on."
+            "title_en": "Daily Practice Sets",
+            "title_bn": "প্রতিদিনের অনুশীলন সেট",
+            "desc_en": "Short, targeted tasks after every class to lock in concepts before you move on.",
+            "desc_bn": "প্রতিটি ক্লাসের পরেই বিশেষ প্র্যাকটিস টাস্ক, যা আপনার ধারণাকে মজবুত করবে।"
           },
           {
-            "title": "Personal Mentor Feedback",
-            "desc": "Never get stuck on an error. Mentors review your calculations and code step-by-step."
+            "title_en": "Personal Mentor Feedback",
+            "title_bn": "ব্যক্তিগত মেন্টর ফিডব্যাক",
+            "desc_en": "Never get stuck on an error. Mentors review your calculations and code step-by-step.",
+            "desc_bn": "সমস্যায় আটকে থাকার ভয় নেই। মেন্টররা আপনার প্রতিটি ভুল শুধরে দেবেন ব্যক্তিগতভাবে।"
           },
           {
-            "title": "Learn at your pace",
-            "desc": "Every live class is recorded in HD and posted with notes, formula sheets, and practice sets."
+            "title_en": "Learn at your pace",
+            "title_bn": "নিজের সুবিধামতো শেখা",
+            "desc_en": "Every live class is recorded in HD and posted with notes, formula sheets, and practice sets.",
+            "desc_bn": "প্রতিটি ক্লাসের এইচডি রেকর্ডিং, ক্লাস নোট ও প্র্যাকটিস শিট থাকছে আজীবন অ্যাক্সেসযোগ্য।"
           },
           {
-            "title": "Exams that feel real",
-            "desc": "Monthly timed mock tests under board/exam conditions, with comprehensive score breakdowns."
+            "title_en": "Exams that feel real",
+            "title_bn": "বাস্তবসম্মত মক টেস্ট",
+            "desc_en": "Monthly timed mock tests under board/exam conditions, with comprehensive score breakdowns.",
+            "desc_bn": "বোর্ড ও স্ট্যান্ডার্ড পরীক্ষার আদলে নিয়মিত টাইমড মক টেস্ট এবং বিস্তারিত ফলাফল বিশ্লেষণ।"
           }
         ]
       },
@@ -374,27 +468,175 @@
         "kicker": "অনুশীলনের অনন্য বৈশিষ্ট্য",
         "heading": "আমাদের এখানে শেখার অভিজ্ঞতা কেন অন্যরকম",
         "lead": "একটানা দীর্ঘ লেকচারের পরিবর্তে আমরা নিয়ে এসেছি ইন্টারঅ্যাক্টিভ কনসেপ্ট সেশন, তাৎক্ষণিক প্র্যাকটিস এবং অভিজ্ঞ মেন্টরদের নিবিড় তত্ত্বাবধান।",
+        "stats": [
+          {
+            "count": 12000,
+            "suffix": "+",
+            "label_en": "Active learners",
+            "label_bn": "নিয়মিত শিক্ষার্থী"
+          },
+          {
+            "count": 98,
+            "suffix": "%",
+            "label_en": "Mock exam pass rate",
+            "label_bn": "মক টেস্টে পাসের হার"
+          },
+          {
+            "count": 40,
+            "suffix": "+",
+            "label_en": "Districts joined",
+            "label_bn": "জেলায় কার্যক্রম"
+          },
+          {
+            "count": 24,
+            "suffix": "h",
+            "label_en": "Mentor feedback SLA",
+            "label_bn": "মেন্টর ফিডব্যাক নিশ্চয়তা"
+          }
+        ],
         "features": [
           {
-            "title": "প্রতিদিনের অনুশীলন সেট",
-            "desc": "প্রতিটি ক্লাসের পরেই বিশেষ প্র্যাকটিস টাস্ক, যা আপনার ধারণাকে মজবুত করবে।"
+            "title_en": "Daily Practice Sets",
+            "title_bn": "প্রতিদিনের অনুশীলন সেট",
+            "desc_en": "Short, targeted tasks after every class to lock in concepts before you move on.",
+            "desc_bn": "প্রতিটি ক্লাসের পরেই বিশেষ প্র্যাকটিস টাস্ক, যা আপনার ধারণাকে মজবুত করবে।"
           },
           {
-            "title": "ব্যক্তিগত মেন্টর ফিডব্যাক",
-            "desc": "সমস্যায় আটকে থাকার ভয় নেই। মেন্টররা আপনার প্রতিটি ভুল শুধরে দেবেন ব্যক্তিগতভাবে।"
+            "title_en": "Personal Mentor Feedback",
+            "title_bn": "ব্যক্তিগত মেন্টর ফিডব্যাক",
+            "desc_en": "Never get stuck on an error. Mentors review your calculations and code step-by-step.",
+            "desc_bn": "সমস্যায় আটকে থাকার ভয় নেই। মেন্টররা আপনার প্রতিটি ভুল শুধরে দেবেন ব্যক্তিগতভাবে।"
           },
           {
-            "title": "নিজের সুবিধামতো শেখা",
-            "desc": "প্রতিটি ক্লাসের এইচডি রেকর্ডিং, ক্লাস নোট ও প্র্যাকটিস শিট থাকছে আজীবন অ্যাক্সেসযোগ্য।"
+            "title_en": "Learn at your pace",
+            "title_bn": "নিজের সুবিধামতো শেখা",
+            "desc_en": "Every live class is recorded in HD and posted with notes, formula sheets, and practice sets.",
+            "desc_bn": "প্রতিটি ক্লাসের এইচডি রেকর্ডিং, ক্লাস নোট ও প্র্যাকটিস শিট থাকছে আজীবন অ্যাক্সেসযোগ্য।"
           },
           {
-            "title": "বাস্তবসম্মত মক টেস্ট",
-            "desc": "বোর্ড ও স্ট্যান্ডার্ড পরীক্ষার আদলে নিয়মিত টাইমড মক টেস্ট এবং বিস্তারিত ফলাফল বিশ্লেষণ।"
+            "title_en": "Exams that feel real",
+            "title_bn": "বাস্তবসম্মত মক টেস্ট",
+            "desc_en": "Monthly timed mock tests under board/exam conditions, with comprehensive score breakdowns.",
+            "desc_bn": "বোর্ড ও স্ট্যান্ডার্ড পরীক্ষার আদলে নিয়মিত টাইমড মক টেস্ট এবং বিস্তারিত ফলাফল বিশ্লেষণ।"
           }
         ]
       },
-      "media": {},
-      "updated_at": "2026-10-21T15:45:12.164Z"
+      "media": {}
+    },
+    {
+      "section_id": "practice",
+      "name": "Interactive Practice Arena",
+      "data_en": {
+        "badge": "Interactive Practice Quiz",
+        "heading": "Try our daily practice right now",
+        "lead": "Pick a subject, answer the question, and see how Onushilon instant feedback works.",
+        "tasks": [
+          {
+            "subject": "Physics",
+            "question": "An object is thrown vertically upward with initial velocity u. At what height does kinetic energy equal potential energy?",
+            "options": [
+              "h = u² / (4g)",
+              "h = u² / (2g)",
+              "h = 2u² / g",
+              "h = u² / g"
+            ],
+            "correct": 0,
+            "explanation": "At this height, PE = mgh = ½(½mu²) = ¼mu². Since PE = mgh, h = u²/(4g)."
+          },
+          {
+            "subject": "Mathematics",
+            "question": "If log₂(x - 1) + log₂(x + 1) = 3, what is the positive real value of x?",
+            "options": [
+              "x = 2",
+              "x = 3",
+              "x = √8",
+              "x = 4"
+            ],
+            "correct": 1,
+            "explanation": "log₂((x-1)(x+1)) = 3 => x² - 1 = 2³ = 8 => x² = 9 => x = 3 (since x > 1)."
+          },
+          {
+            "subject": "English",
+            "question": "Choose the correct indirect speech: She said, 'I have been practicing since morning.'",
+            "options": [
+              "She said that she had been practicing since morning.",
+              "She said that she has been practicing since morning.",
+              "She said that she was practicing since morning.",
+              "She said that she is practicing since morning."
+            ],
+            "correct": 0,
+            "explanation": "Present perfect continuous shifts to past perfect continuous ('had been practicing')."
+          },
+          {
+            "subject": "Robotics",
+            "question": "In an autonomous line-following bot using IR sensors, what does digital output HIGH typically indicate on white surface?",
+            "options": [
+              "Sensor detected high reflection (white surface)",
+              "Sensor detected line absorption (black line)",
+              "Motor driver overcurrent",
+              "Microcontroller reset"
+            ],
+            "correct": 0,
+            "explanation": "Infrared light reflects strongly on white surface, returning high signal to the comparator."
+          }
+        ]
+      },
+      "data_bn": {
+        "badge": "ইন্টারেক্টিভ কুইজ প্র্যাকটিস",
+        "heading": "এখনই একটি প্রশ্নের সমাধান করে দেখুন",
+        "lead": "একটি বিষয় বেছে নিন, সঠিক উত্তর নির্বাচন করুন এবং অনুশীলনের তাৎক্ষণিক ফিডব্যাক পদ্ধতি দেখুন।",
+        "tasks": [
+          {
+            "subject": "পদার্থবিজ্ঞান",
+            "question": "একটি বস্তুকে u আদিবেগে খাড়া উপরের দিকে নিক্ষেপ করা হলে কোন উচ্চতায় গতিশক্তি ও স্থিতিশক্তি সমান হবে?",
+            "options": [
+              "h = u² / (4g)",
+              "h = u² / (2g)",
+              "h = 2u² / g",
+              "h = u² / g"
+            ],
+            "correct": 0,
+            "explanation": "এই উচ্চতায় স্থিতিশক্তি = mgh = ¼mu²। সুতরাং h = u² / (4g)।"
+          },
+          {
+            "subject": "উচ্চতর গণিত",
+            "question": "যদি log₂(x - 1) + log₂(x + 1) = ৩ হয়, তবে x-এর ধনাত্মক বাস্তব মান কত?",
+            "options": [
+              "x = ২",
+              "x = ৩",
+              "x = √৮",
+              "x = ৪"
+            ],
+            "correct": 1,
+            "explanation": "log₂((x-1)(x+1)) = ৩ => x² - ১ = ৮ => x² = ৯ => x = ৩।"
+          },
+          {
+            "subject": "ইংরেজি",
+            "question": "She said, 'I have been practicing since morning.' — সঠিক ইনডাইরেক্ট স্পিচ কোনটি?",
+            "options": [
+              "She said that she had been practicing since morning.",
+              "She said that she has been practicing since morning.",
+              "She said that she was practicing since morning.",
+              "She said that she is practicing since morning."
+            ],
+            "correct": 0,
+            "explanation": "প্রেজেন্ট পারফেক্ট কন্টিনিউয়াস পরিবর্তিত হয়ে পাস্ট পারফেক্ট কন্টিনিউয়াস হয়।"
+          },
+          {
+            "subject": "রোবোটিক্স",
+            "question": "আইআর সেন্সরযুক্ত লাইন ফলোয়ার রোবটে সাদা তলে সেন্সরের ডিজিটাল আউটপুট কী নির্দেশ করে?",
+            "options": [
+              "সাদা পৃষ্ঠ থেকে আলো প্রতিফলিত হয়ে হাই সিগন্যাল",
+              "কালো দাগে আলো শোষিত হয়ে সিগন্যাল",
+              "মোটর ওভারকারেন্ট",
+              "মাইক্রোকন্ট্রোলার রিসেট"
+            ],
+            "correct": 0,
+            "explanation": "সাদা তল থেকে অবলোহিত আলো সর্বাধিক প্রতিফলিত হয়ে তুলনাকারী সার্কিটে হাই লজিক তৈরি করে।"
+          }
+        ]
+      },
+      "media": {}
     },
     {
       "section_id": "voices",
@@ -406,25 +648,25 @@
             "quote": "The art mentors here don't just teach techniques; they helped me discover my own painting style. Seeing my artwork on exhibition was a dream come true!",
             "name": "Tasnim Akter",
             "role": "Creative Arts & Design graduate",
-            "image_url": "/images/photos/art_class3.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/art_class3.webp"
           },
           {
             "quote": "Building and programming an autonomous robot with my own hands was unforgettable. The robotics lab mentors guided us through every sensor and circuit.",
             "name": "Sadman Sakib",
             "role": "Robotics & STEM batch 2024",
-            "image_url": "/images/photos/robotic_class4.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/robotic_class4.webp"
           },
           {
             "quote": "Practice every single day finally made physics equations click for me. My mentor reviewed every step of my solution, not just the final number.",
             "name": "Nusrat Jahan",
             "role": "HSC Science achiever, Dhaka",
-            "image_url": "/images/photos/classroom2.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/classroom2.webp"
           },
           {
             "quote": "I was terrified of speaking English in public. The interactive fun sessions and 1-on-1 speaking drills completely transformed my fluency and confidence.",
             "name": "Rafiul Islam",
             "role": "Spoken English graduate",
-            "image_url": "/images/photos/learn_with_fun.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/learn_with_fun.webp"
           }
         ]
       },
@@ -435,30 +677,29 @@
             "quote": "এখানে আর্ট মেন্টররা শুধু কৌশল শেখান না; তারা আমার নিজস্ব চিত্রশৈলী খুঁজে পেতে সাহায্য করেছেন। এক্সিবিশনে আমার আঁকা ছবি দেখে নিজের স্বপ্ন পূরণ হয়েছে!",
             "name": "তাসনিম আক্তার",
             "role": "চারুকলা ও ডিজাইন ব্যাচ",
-            "image_url": "/images/photos/art_class3.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/art_class3.webp"
           },
           {
             "quote": "নিজের হাতে রোবট তৈরি করে প্রোগ্রামিং করা আমার জীবনের সবচেয়ে রোমাঞ্চকর অভিজ্ঞতা ছিল। ল্যাবের মেন্টররা প্রতিটি ধাপে আমাদের সাহায্য করেছেন।",
             "name": "সাদমান সাকিব",
             "role": "রোবোটিক্স ও স্টেম শিক্ষার্থী",
-            "image_url": "/images/photos/robotic_class4.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/robotic_class4.webp"
           },
           {
             "quote": "প্রতিদিনের নিয়মিত অনুশীলন আমাকে পদার্থবিজ্ঞানের কঠিন কনসেপ্টগুলো সহজে বুঝতে সাহায্য করেছে। মেন্টররা শুধু উত্তর নয়, সমাধানের প্রতিটি ধাপ বুঝিয়ে দিতেন।",
             "name": "নুসরাত জাহান",
             "role": "এইচএসসি বিজ্ঞান বিভাগ, ঢাকা",
-            "image_url": "/images/photos/classroom2.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/classroom2.webp"
           },
           {
             "quote": "ইংরেজিতে কথা বলতে আমার ভীষণ জড়তা কাজ করত। অনুশীলন একাডেমির ফ্রেন্ডলি সেশনগুলো আমার আত্মবিশ্বাস পুরোপুরি বদলে দিয়েছে।",
             "name": "রাফিউল ইসলাম",
             "role": "স্পোকেন ইংলিশ ব্যাচ",
-            "image_url": "/images/photos/learn_with_fun.webp"
+            "image_url": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/learn_with_fun.webp"
           }
         ]
       },
-      "media": {},
-      "updated_at": "2026-10-21T15:45:12.167Z"
+      "media": {}
     },
     {
       "section_id": "faq",
@@ -507,8 +748,7 @@
           }
         ]
       },
-      "media": {},
-      "updated_at": "2026-10-21T15:45:12.169Z"
+      "media": {}
     },
     {
       "section_id": "cta",
@@ -524,9 +764,35 @@
         "submit_btn": "আসন সংরক্ষণ নিশ্চিত করুন →"
       },
       "media": {
-        "background_image": "/images/photos/Fun_and_learning.webp"
+        "background_image": "https://okhqtcykqdkivxsghyrv.supabase.co/storage/v1/object/public/onushilon/photos/Fun_and_learning.webp"
+      }
+    },
+    {
+      "section_id": "marquee",
+      "name": "Running Marquee Banner",
+      "data_en": {
+        "items": [
+          "Live Mentorship",
+          "STEM Robotics Lab",
+          "Creative Arts",
+          "Spoken English Fluency",
+          "HSC & SSC Science",
+          "Daily Practice Drills",
+          "Hands-on Experiments"
+        ]
       },
-      "updated_at": "2026-10-21T15:45:12.172Z"
+      "data_bn": {
+        "items": [
+          "সরাসরি মেন্টরশিপ",
+          "স্টেম রোবোটিক্স ল্যাব",
+          "চারুকলা ও আর্ট",
+          "স্পোকেন ইংলিশ ফ্লুয়েন্সি",
+          "এইচএসসি ও এসএসসি সায়েন্স",
+          "প্রতিদিনের অনুশীলন ড্রিল",
+          "হ্যান্ডস-অন এক্সপেরিমেন্ট"
+        ]
+      },
+      "media": {}
     }
   ],
   "mentors": [
